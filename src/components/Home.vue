@@ -4,7 +4,7 @@
         <v-layout row wrap>
           <v-flex xs12 sm6 offset-sm3>
             <v-card>
-              <v-card-media src="/static/koyun33.png" height="400px">
+              <v-card-media src="/koyun/static/koyun33.png" height="400px">
               </v-card-media>
               <v-card-actions>
                 <v-btn v-on:click= "" router to="/disiler" class="error" > Dişiler </v-btn>
