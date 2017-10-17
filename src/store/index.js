@@ -77,7 +77,7 @@ export const store = new Vuex.Store({
     // Kesilenler yukleniyor
     YukleK ({commit}) {
       commit('mSetLoading', true)
-      firebase.database().ref('Kesilenler').once('value')
+      firebase.database().ref('Koyun/Kesilenler').once('value')
         .then((data) => {
           const koyun = []
           const obj = data.val()
@@ -107,7 +107,7 @@ export const store = new Vuex.Store({
     // yeni doganlar yukleniyor ---
     YukleD ({commit}) {
       commit('mSetLoading', true)
-      firebase.database().ref('Dogumlar').once('value')
+      firebase.database().ref('Koyun/Dogumlar').once('value')
         .then((data) => {
           const ana = []
           // const doganobj = {}
@@ -141,7 +141,7 @@ export const store = new Vuex.Store({
     // dişiler yukleniyor
     Yukle ({commit}) {
       commit('mSetLoading', true)
-      firebase.database().ref('Canlilar/Disi').once('value')
+      firebase.database().ref('Koyun/Canlilar/Disi').once('value')
         .then((data) => {
           const koyun = []
           const obj = data.val()
@@ -171,7 +171,7 @@ export const store = new Vuex.Store({
     // erkekler yukleniyor
     YukleE ({commit}) {
       commit('mSetLoading', true)
-      firebase.database().ref('Canlilar/Erkek').once('value')
+      firebase.database().ref('Koyun/Canlilar/Erkek').once('value')
         .then((data) => {
           const koyun = []
           const obj = data.val()
