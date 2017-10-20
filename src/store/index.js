@@ -9,6 +9,7 @@ export const store = new Vuex.Store({
     cinsiyet: false,
     loading: false,
     error: null,
+    user: null,
     items: [],
     erkeks: [],
     dogans: [],
@@ -238,6 +239,9 @@ export const store = new Vuex.Store({
           return item.id === itemId
         })
       }
+    },
+    gUser (state) {
+      return state.user
     },
     gYeniDoganlar (state) {
       return state.dogans

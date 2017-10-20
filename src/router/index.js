@@ -5,6 +5,7 @@ import Disiler from '@/components/disiler/Disiler'
 import Erkekler from '@/components/erkekler/Erkekler'
 import Doganlar from '@/components/doganlar/Doganlar'
 import Kesilenler from '@/components/kesilenler/Kesilenler'
+import Giris from '@/components/giris/Giris'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/kesilenler',
       name: 'Kesilenler',
       component: Kesilenler
+    },
+    {
+      path: '/giris',
+      name: 'Giris',
+      component: Giris
     }
   ],
   mode: 'history'
