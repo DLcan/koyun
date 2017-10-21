@@ -38,12 +38,12 @@
                               v-model="props.selected"
                               ></v-checkbox>
                             </td>
-                            <td  class="text-xs-left">{{ props.item.AnaAdi }}</td>
                             <td  class="text-xs-right">{{ props.item.RecNo }}</td>
+                            <td  class="text-xs-right">{{ props.item.isim }}</td>
                             <td  class="text-xs-right">{{ props.item.Cinsiyet }}</td>
                             <td  class="text-xs-right">{{ props.item.SirtNo }}</td>
                             <td  class="text-xs-right">{{ props.item.Tarih | date }}</td>
-                            <td  class="text-xs-right">{{ props.item.isim }}</td>
+                            <td  class="text-xs-right">{{ props.item.AnaAdi }}</td>
 
                         </template>
                     </v-data-table>
@@ -67,12 +67,12 @@
         },
         selected: [],
         headers: [
-          { text: 'Anne Adı', sortable: false, align: 'left', value: 'AnaAdi' },
           { text: 'Rec No', value: 'RecNo' },
+          { text: 'İsim', sortable: false, value: 'isim' },
           { text: 'Cinsiyet', value: 'Cinsiyet' },
           { text: 'Sırt No', value: 'SirtNo' },
           { text: 'Doğum tarihi', value: 'Tarih' },
-          { text: 'İsim', sortable: false, value: 'isim' }
+          { text: 'Anne Adı', sortable: false, value: 'AnaAdi' }
         ]
       }
     },
