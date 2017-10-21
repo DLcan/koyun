@@ -77,7 +77,7 @@
           { text: 'Kulak No', value: 'KulakNumarasi' },
           { text: 'Cinsiyet', value: 'Cinsiyet' },
           { text: 'Doğum tarihi', value: 'DogumTarihi' },
-          { text: 'Anne Rec No', value: 'AnneRecNo' }
+          { text: 'Anne Rec No', align: 'center', value: 'AnneRecNo' }
         ]
       }
     },
