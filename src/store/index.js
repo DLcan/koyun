@@ -86,7 +86,7 @@ export const store = new Vuex.Store({
               id: key,
               HayvanAdi: obj[key].HayvanAdi,
               SirtNo: obj[key].SirtNo,
-              RecNo: obj[key].RecNo,
+              RecNo: key,
               KulakNumarasi: obj[key].KulakNumarasi,
               Cinsiyet: obj[key].Cinsiyet,
               DogumTarihi: obj[key].DogumTarihi,
