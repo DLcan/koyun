@@ -90,6 +90,7 @@ export const store = new Vuex.Store({
               KulakNumarasi: obj[key].KulakNumarasi,
               Cinsiyet: obj[key].Cinsiyet,
               DogumTarihi: obj[key].DogumTarihi,
+              AciklamaTarihi: obj[key].AciklamaTarihi,
               AnneRecNo: obj[key].AnneRecNo
             })
           }
@@ -183,6 +184,7 @@ export const store = new Vuex.Store({
               RecNo: obj[key].RecNo,
               KulakNumarasi: obj[key].KulakNumarasi,
               Cinsiyet: obj[key].Cinsiyet,
+              DamizlikMi: obj[key].DamizlikMi,
               DogumTarihi: obj[key].DogumTarihi,
               AnneRecNo: obj[key].AnneRecNo
             })
