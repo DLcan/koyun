@@ -43,6 +43,7 @@
                              <td  class="text-xs-right">{{ props.item.KulakNumarasi }}</td>
                              <td  class="text-xs-right">{{ props.item.Cinsiyet }}</td>
                              <td  class="text-xs-right">{{ props.item.DogumTarihi | date }}</td>
+                             <td  class="text-xs-right">{{ props.item.AciklamaTarihi | date }}</td>
                              <td  class="text-xs-center">{{ props.item.AnneRecNo }}</td>
                          </template>
                      </v-data-table>
@@ -62,7 +63,8 @@
          title: 'Kesilenler',
          search: '',
          pagination: {
-           sortBy: 'RecNo'
+           sortBy: 'AciklamaTarihi',
+           descending: true
          },
          selected: [],
          headers: [
@@ -76,6 +78,7 @@
            { text: 'Kulak No', value: 'KulakNumarasi' },
            { text: 'Cinsiyet', value: 'Cinsiyet' },
            { text: 'Doğum tarihi', value: 'DogumTarihi' },
+           { text: 'Kesim tarihi', value: 'AciklamaTarihi' },
            { text: 'Anne Rec No', value: 'AnneRecNo' }
          ]
        }
