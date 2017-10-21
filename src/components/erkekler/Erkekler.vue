@@ -40,7 +40,7 @@
                             </td>
                             <td>{{ props.item.RecNo }}</td>
                             <td  class="text-xs-right">{{ props.item.HayvanAdi }}</td>
-                            <td  class="text-xs-right">{{ props.item.SirtNo }}</td>
+                            <td  class="text-xs-right">{{ props.item.SirtNo }} {{ props.item.DamizlikMi[0] }}</td>
                             <td  class="text-xs-right">{{ props.item.KulakNumarasi }}</td>
                             <td  class="text-xs-right">{{ props.item.Cinsiyet }}</td>
                             <td  class="text-xs-right">{{ props.item.DogumTarihi | date }}</td>
