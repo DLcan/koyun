@@ -81,7 +81,7 @@
            { text: 'Cinsiyet', value: 'Cinsiyet' },
            { text: 'Doğum tarihi', value: 'DogumTarihi' },
            { text: 'Kesim tarihi', value: 'AciklamaTarihi' },
-           { text: 'Anne Rec No', value: 'AnneRecNo' }
+           { text: 'Anne Rec No', align: 'center', value: 'AnneRecNo' }
          ]
        }
      },
