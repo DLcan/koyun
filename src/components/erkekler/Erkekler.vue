@@ -24,6 +24,8 @@
                         select-all
                         v-bind:pagination.sync="pagination"
                         class="elevation-1"
+                        no-data-text="Kayıt yok"
+                        rows-per-page-text="Sayfa başı kayıt sayısı"
                         >
                         <template slot="headerCell" slot-scope="props">
                              <span>
