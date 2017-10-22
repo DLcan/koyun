@@ -45,7 +45,7 @@
                             <td  class="text-xs-right">{{ props.item.Cinsiyet }}</td>
                             <td  class="text-xs-right">{{ props.item.SirtNo }}</td>
                             <td  class="text-xs-right">{{ props.item.Tarih | date }}</td>
-                            <td  class="text-xs-right">{{ props.item.AnaAdi }}</td>
+                            <td  class="text-xs-center">{{ props.item.AnaAdi }}</td>
 
                         </template>
                     </v-data-table>
@@ -65,7 +65,8 @@
         title: 'Yeni Doğanlar',
         search: '',
         pagination: {
-          sortBy: 'Tarih'
+          sortBy: 'RecNo',
+          descending: true
         },
         selected: [],
         headers: [
@@ -74,7 +75,7 @@
           { text: 'Cinsiyet', value: 'Cinsiyet' },
           { text: 'Sırt No', value: 'SirtNo' },
           { text: 'Doğum tarihi', value: 'Tarih' },
-          { text: 'Anne Adı', sortable: false, value: 'AnaAdi' }
+          { text: 'Anne Adı', sortable: false, align: 'center', value: 'AnaAdi' }
         ]
       }
     },
