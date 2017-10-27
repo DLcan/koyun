@@ -24,6 +24,8 @@
                         select-all
                         v-bind:pagination.sync="pagination"
                         class="elevation-1"
+                        no-data-text="Kayıt yok"
+                        rows-per-page-text="Sayfa başı kayıt sayısı"
                         >
                         <template slot="headerCell" slot-scope="props">
                           <span>
@@ -38,12 +40,12 @@
                               v-model="props.selected"
                               ></v-checkbox>
                             </td>
-                            <td  class="text-xs-left">{{ props.item.AnaAdi }}</td>
                             <td  class="text-xs-right">{{ props.item.RecNo }}</td>
+                            <td  class="text-xs-right">{{ props.item.isim }}</td>
                             <td  class="text-xs-right">{{ props.item.Cinsiyet }}</td>
                             <td  class="text-xs-right">{{ props.item.SirtNo }}</td>
                             <td  class="text-xs-right">{{ props.item.Tarih | date }}</td>
-                            <td  class="text-xs-right">{{ props.item.isim }}</td>
+                            <td  class="text-xs-center">{{ props.item.AnaAdi }}</td>
 
                         </template>
                     </v-data-table>
@@ -63,16 +65,17 @@
         title: 'Yeni Doğanlar',
         search: '',
         pagination: {
-          sortBy: 'Tarih'
+          sortBy: 'RecNo',
+          descending: true
         },
         selected: [],
         headers: [
-          { text: 'Anne Adı', sortable: false, align: 'left', value: 'AnaAdi' },
           { text: 'Rec No', value: 'RecNo' },
+          { text: 'İsim', sortable: false, value: 'isim' },
           { text: 'Cinsiyet', value: 'Cinsiyet' },
           { text: 'Sırt No', value: 'SirtNo' },
           { text: 'Doğum tarihi', value: 'Tarih' },
-          { text: 'İsim', sortable: false, value: 'isim' }
+          { text: 'Anne Adı', sortable: false, align: 'center', value: 'AnaAdi' }
         ]
       }
     },

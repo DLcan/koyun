@@ -78,7 +78,7 @@ export const store = new Vuex.Store({
     // Kesilenler yukleniyor
     YukleK ({commit}) {
       commit('mSetLoading', true)
-      firebase.database().ref('Kesilenler').once('value')
+      firebase.database().ref('Koyun/Kesilenler').once('value')
         .then((data) => {
           const koyun = []
           const obj = data.val()
@@ -87,10 +87,11 @@ export const store = new Vuex.Store({
               id: key,
               HayvanAdi: obj[key].HayvanAdi,
               SirtNo: obj[key].SirtNo,
-              RecNo: obj[key].RecNo,
+              RecNo: key,
               KulakNumarasi: obj[key].KulakNumarasi,
               Cinsiyet: obj[key].Cinsiyet,
               DogumTarihi: obj[key].DogumTarihi,
+              AciklamaTarihi: obj[key].AciklamaTarihi,
               AnneRecNo: obj[key].AnneRecNo
             })
           }
@@ -108,7 +109,7 @@ export const store = new Vuex.Store({
     // yeni doganlar yukleniyor ---
     YukleD ({commit}) {
       commit('mSetLoading', true)
-      firebase.database().ref('Dogumlar').once('value')
+      firebase.database().ref('Koyun/Dogumlar').once('value')
         .then((data) => {
           const ana = []
           // const doganobj = {}
@@ -142,7 +143,7 @@ export const store = new Vuex.Store({
     // dişiler yukleniyor
     Yukle ({commit}) {
       commit('mSetLoading', true)
-      firebase.database().ref('Canlilar/Disi').once('value')
+      firebase.database().ref('Koyun/Canlilar/Disi').once('value')
         .then((data) => {
           const koyun = []
           const obj = data.val()
@@ -172,7 +173,7 @@ export const store = new Vuex.Store({
     // erkekler yukleniyor
     YukleE ({commit}) {
       commit('mSetLoading', true)
-      firebase.database().ref('Canlilar/Erkek').once('value')
+      firebase.database().ref('Koyun/Canlilar/Erkek').once('value')
         .then((data) => {
           const koyun = []
           const obj = data.val()
@@ -184,6 +185,7 @@ export const store = new Vuex.Store({
               RecNo: obj[key].RecNo,
               KulakNumarasi: obj[key].KulakNumarasi,
               Cinsiyet: obj[key].Cinsiyet,
+              DamizlikMi: obj[key].DamizlikMi,
               DogumTarihi: obj[key].DogumTarihi,
               AnneRecNo: obj[key].AnneRecNo
             })

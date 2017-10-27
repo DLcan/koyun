@@ -17,6 +17,7 @@ import {
   VGrid,
   VToolbar,
   VTooltip,
+  VProgressCircular,
   transitions
 } from 'vuetify'
 
@@ -42,6 +43,7 @@ Vue.use(Vuetify, {
     VGrid,
     VToolbar,
     VTooltip,
+    VProgressCircular,
     transitions
   }
 })
