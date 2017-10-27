@@ -64,11 +64,7 @@ new Vue({
       databaseURL: 'https://koyun-48596.firebaseio.com',
       projectId: 'koyun-48596',
       storageBucket: 'koyun-48596.appspot.com'
-/*       apiKey: 'AIzaSyDVZwnyu0qfGe-zLM1SxpHXLKE7beRrc7c',
-      authDomain: 'vuekoyun.firebaseapp.com',
-      databaseURL: 'https://vuekoyun.firebaseio.com',
-      projectId: 'vuekoyun',
-      storageBucket: 'vuekoyun.appspot.com' */
+
     })
     this.$store.dispatch('Yukle')
     this.$store.dispatch('YukleD')
