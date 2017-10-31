@@ -17,11 +17,11 @@
               <v-card-media src="/koyun/static/koyun33.png" height="400px">
               </v-card-media>
               <v-card-actions v-if="!loading">
-                <v-btn v-on:click= "" router to="/disiler" class="error" > Dişiler </v-btn>
-                <v-btn v-on:click= "" router to="/erkekler" class="info"> Erkekler </v-btn>
-                <v-btn v-on:click= "" router to="/doganlar" class="warning"> Yeni Doğanlar </v-btn>
+                <v-btn v-on:click= "" router to="/disiler" class="error" > Dişiler:  {{ this.$store.getters.gYukluKoyunlar.length }}</v-btn>
+                <v-btn v-on:click= "" router to="/erkekler" class="info"> Erkekler:  {{ this.$store.getters.gYukluErkekler.length }}</v-btn>
+                <v-btn v-on:click= "" router to="/doganlar" class="warning">(Yeni Doğanlar: {{ this.$store.getters.gYeniDoganlar.length }})</v-btn>
                 <v-spacer></v-spacer>
-                <v-btn v-on:click= "" router to="/kesilenler" class="disabled"> Kesilenler </v-btn>
+                <v-btn v-on:click= "" router to="/kesilenler" class="disabled"> Kesilenler:  {{ this.$store.getters.gYukluKesilenler.length }}</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -33,6 +33,9 @@
       computed: {
         loading () {
           return this.$store.getters.gLoading
+        },
+        dboy () {
+          return this.$store.getters.gYukluKoyunlar.length
         }
       }
     }
