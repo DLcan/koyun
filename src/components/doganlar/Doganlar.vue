@@ -20,7 +20,7 @@
                         v-bind:items="items"
                         v-bind:search="search"
                         v-model="selected"
-                        selected-key="DogumTarihi"
+                        selected-key="RecNo"
                         select-all
                         v-bind:pagination.sync="pagination"
                         class="elevation-1"
