@@ -40,6 +40,7 @@
                               v-model="props.selected"
                               ></v-checkbox>
                             </td>
+                            <td>{{ props.item.RecNo }}</td>
                             <td  class="text-xs-right">{{ props.item.RecNo }}</td>
                             <td  class="text-xs-right">{{ props.item.isim }}</td>
                             <td  class="text-xs-right">{{ props.item.Cinsiyet }}</td>
