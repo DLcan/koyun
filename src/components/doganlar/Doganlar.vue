@@ -19,9 +19,6 @@
                         v-bind:headers="headers"
                         v-bind:items="items"
                         v-bind:search="search"
-                        v-model="selected"
-                        selected-key="RecNo"
-                        select-all
                         v-bind:pagination.sync="pagination"
                         class="elevation-1"
                         no-data-text="Kayıt yok"
@@ -33,21 +30,19 @@
                           </span>
                         </template>
                         <template slot="items" slot-scope="props">
-                            <td>
+<!--                             <td>
                               <v-checkbox
                               primary
                               hide-details
                               v-model="props.selected"
                               ></v-checkbox>
-                            </td>
-                            <td>{{ props.item.RecNo }}</td>
+                            </td> -->
                             <td  class="text-xs-right">{{ props.item.RecNo }}</td>
                             <td  class="text-xs-right">{{ props.item.isim }}</td>
                             <td  class="text-xs-right">{{ props.item.Cinsiyet }}</td>
                             <td  class="text-xs-right">{{ props.item.SirtNo }}</td>
                             <td  class="text-xs-right">{{ props.item.Tarih | date }}</td>
                             <td  class="text-xs-center">{{ props.item.AnaAdi }}</td>
-
                         </template>
                     </v-data-table>
                     <div class="text-xs-center pt-2">
