@@ -92,6 +92,7 @@ export const store = new Vuex.Store({
               Cinsiyet: obj[key].Cinsiyet,
               DogumTarihi: obj[key].DogumTarihi,
               AciklamaTarihi: obj[key].AciklamaTarihi,
+              Aciklama: obj[key].Aciklama,
               AnneRecNo: obj[key].AnneRecNo
             })
           }

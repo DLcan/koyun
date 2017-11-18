@@ -46,6 +46,7 @@
                              <td  class="text-xs-right">{{ props.item.Cinsiyet }}</td>
                              <td  class="text-xs-right">{{ props.item.DogumTarihi | date }}</td>
                              <td  class="text-xs-right">{{ props.item.AciklamaTarihi | date }}</td>
+                             <td  class="text-xs-right">{{ props.item.Aciklama }}</td>
                              <td  class="text-xs-center">{{ props.item.AnneRecNo }}</td>
                          </template>
                      </v-data-table>
@@ -81,6 +82,7 @@
            { text: 'Cinsiyet', value: 'Cinsiyet' },
            { text: 'Doğum tarihi', value: 'DogumTarihi' },
            { text: 'Kesim tarihi', value: 'AciklamaTarihi' },
+           { text: 'Açıklama', value: 'Aciklama' },
            { text: 'Anne Rec No', align: 'center', value: 'AnneRecNo' }
          ]
        }
